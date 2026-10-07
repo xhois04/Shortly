@@ -1,14 +1,12 @@
-﻿@model List<Url>;
-
-
+﻿@model List<Url>
 @{
-	var currentDateTime = DateTime.UtcNow;
+    var currentDateTime = DateTime.UtcNow;
+  
 }
+<h4>@ViewBag.ShortenedUrl</h4>
 
-<h4>Example</h4>
-<p>Original Link: @Model.First()OriginalLink</p>
-
-@foreach(var link in @Model)
+@foreach (var url in @ViewBag.allUrls)
 {
-	<p>Original link: @link.OriginalLink</p>
+    <h3>@url</h3>
+    
 }

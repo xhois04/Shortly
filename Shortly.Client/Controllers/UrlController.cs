@@ -8,20 +8,11 @@ namespace Shortly.Client.Controllers
     {
         public IActionResult Index()
         {
-            //Data is from DB
-            var urlDb = new Url()
-            {
-                Id = 1,
-                OriginalLink = "https://original.com",
-                ShortLink = "shrtly",
-                NrOfClicks = 1,
-                UserId = 1,
-            };
+            ViewData.ShortenedUrl ="This is just a short url";
+            ViewData.allUrls = new List<string>() {"Url 1", "Url 2", "Url 3" };
+       
 
-            var allData = new List<Url>();
-            allData.Add(urlDb);
-
-            return View(allData);
+            return View();
         }
     }
 }
