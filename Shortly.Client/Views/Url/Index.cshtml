@@ -1,4 +1,4 @@
-﻿@model Url;
+﻿@model List<Url>;
 
 
 @{
@@ -6,4 +6,9 @@
 }
 
 <h4>Example</h4>
-<p>Original Link: @Model.OriginalLink</p>
+<p>Original Link: @Model.First()OriginalLink</p>
+
+@foreach(var link in @Model)
+{
+	<p>Original link: @link.OriginalLink</p>
+}

@@ -17,8 +17,11 @@ namespace Shortly.Client.Controllers
                 NrOfClicks = 1,
                 UserId = 1,
             };
-            
-            return View(urlDb);
+
+            var allData = new List<Url>();
+            allData.Add(urlDb);
+
+            return View(allData);
         }
     }
 }
