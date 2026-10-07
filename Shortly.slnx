@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Shortly.Client/Shortly.Client.csproj" />
+  <Project Path="Shortly.Data/Shortly.Data.csproj" />
+  <Project Path="Shortly.Redirect/Shortly.Redirect.csproj" />
+</Solution>
