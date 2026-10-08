@@ -9,10 +9,5 @@ namespace Shortly.Client.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
     }
 }
