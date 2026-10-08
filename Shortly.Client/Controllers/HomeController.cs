@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace Shortly.Client.Controllers
 {
@@ -8,6 +7,13 @@ namespace Shortly.Client.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult ShortenAction(string urlToShorten)
+        {
+            TempData["SuccessMessage"] = $"Received: {urlToShorten}";
+            return RedirectToAction("Index", "Url");
         }
     }
 }

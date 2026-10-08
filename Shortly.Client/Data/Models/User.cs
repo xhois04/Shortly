@@ -8,6 +8,6 @@
 
         }
         public int Id { get; set; }
-        public List<Url> Url { get; set; }
+        public List<Url> Urls { get; set; }
     }
 }
